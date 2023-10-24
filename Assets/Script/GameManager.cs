@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     [Header("------------Level Ayarlar")]
     [SerializeField] private GameObject Platform;
+
     [SerializeField] private GameObject Pota;
     [SerializeField] private GameObject PotaBuyutucu;
     [SerializeField] private GameObject[] PotaBuyutucuNoktasi;
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
     [Header("------------Teknik Ayarlar")]
     [SerializeField] private int AtilmasiGerekenTop;
     int BasketSayisi;
-
+    [SerializeField] private GameObject KaybettinPanel;
 
 
 
@@ -79,6 +80,7 @@ public class GameManager : MonoBehaviour
     }
     public void Kaybettin()
     {
+        KaybettinPanel.SetActive(true);
         Sesler[1].Play();
     }
     public void Kazandin()
